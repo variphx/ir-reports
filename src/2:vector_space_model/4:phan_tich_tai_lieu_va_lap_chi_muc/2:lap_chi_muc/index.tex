@@ -1,0 +1,35 @@
+\subsection{Lập chỉ mục}
+\subsubsection{Chỉ mục}
+\textbf{Lập chỉ mục} là một trong những bước cốt lõi và không thể thiếu trong quy trình xây dựng hệ thống truy xuất thông tin. Về bản chất, đây là quá trình thực hiện một phép quét duy nhất trên toàn bộ tập văn bản, với mục đích nhận diện và ghi nhận lại các \textbf{thuật ngữ} -- bao gồm từ hoặc cụm từ -- xuất hiện trong từng tài liệu. Mỗi thuật ngữ sau khi được phát hiện sẽ được gắn kèm theo các thông tin phụ trợ như \textbf{vị trí xuất hiện}, \textbf{tần suất lặp lại}, hay thậm chí là \textbf{độ quan trọng} của nó trong ngữ cảnh tài liệu tương ứng. Những thông tin quý giá này sau đó được tổ chức, cấu trúc và lưu trữ trong một thực thể dữ liệu đặc biệt -- đó chính là \textbf{chỉ mục} (\textit{index}).
+
+Có thể hình dung đơn giản rằng, lập chỉ mục chính là hành động tạo nên một \textbf{cấu trúc dữ liệu trung gian}, nơi chứa đựng những thông tin thiết yếu được trích xuất từ tài liệu gốc, nhằm phục vụ trực tiếp cho quá trình truy vấn về sau. Nhờ vào cấu trúc này, thay vì phải quét lại toàn bộ tập hợp văn bản mỗi lần có yêu cầu tìm kiếm, hệ thống chỉ cần thao tác trên chỉ mục -- một tập hợp đã được nén gọn, tổ chức hợp lý và tối ưu cho việc tra cứu.
+
+\begin{table}[H]
+    \caption{Ví dụ về chỉ mục}
+    \begin{center}
+        \begin{tabularx}{0.8\linewidth}{X || X X X X}
+            \toprule
+                    & \(t_1\) & \(t_2\) & \dots & \(t_m\) \\
+            \midrule\midrule
+            \(d_1\) & 1       & 0       & \dots & 1       \\
+            \dots   & \dots   & ...     & \dots & 1       \\
+            \(d_n\) & 1       & 1       & \dots & 1       \\
+            \bottomrule
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+Quá trình lập chỉ mục thường diễn ra với tốc độ nhanh chóng, bởi các thuật ngữ được ghi nhận theo cách \textbf{gia tăng tuyến tính}, tức là mỗi khi một từ khóa mới được phát hiện, nó sẽ ngay lập tức được thêm vào chỉ mục với các thông tin đi kèm được cập nhật đồng thời. Tuy nhiên, chính sự phong phú và không đồng đều của ngôn ngữ tự nhiên lại tạo nên một thách thức đáng kể -- đó là \textbf{kích thước chỉ mục có thể phình to nhanh chóng}, đặc biệt khi làm việc với kho dữ liệu lớn. Kết quả là, trong khi việc xây dựng chỉ mục có thể được hoàn tất nhanh chóng, thì quá trình tìm kiếm thông tin -- nếu không có thêm biện pháp tối ưu -- có thể gặp trở ngại do chi phí xử lý gia tăng theo độ lớn của cấu trúc chỉ mục.
+
+Tuy nhiên, dù có những hạn chế nhất định về mặt tài nguyên, lập chỉ mục vẫn là một bước đi mang tính chiến lược -- như việc xây dựng một bản đồ tường minh cho vùng dữ liệu ngôn ngữ, nơi mà mỗi bước truy vấn sau này đều có thể lần theo dấu vết của từ ngữ một cách rõ ràng, chính xác và hiệu quả.
+
+\subsubsection{Chỉ mục đảo (Inverted Index)}
+\textbf{Chỉ mục đảo} (\textit{Inverted Index}) là một hình thức tổ chức dữ liệu đặc biệt, được thiết kế để tối ưu hóa khả năng truy vấn trong các hệ thống tìm kiếm thông tin. Khác với cách tiếp cận tuyến tính thông thường, trong đó ta phải quét qua từng tài liệu để kiểm tra sự hiện diện của một thuật ngữ, thì với chỉ mục ngược, mỗi từ khóa sẽ được \textbf{ánh xạ ngược trở lại} -- tức là liên kết trực tiếp đến danh sách các tài liệu mà nó xuất hiện. Đây chính là một cấu trúc dữ liệu có khả năng trả lời cho câu hỏi: \textit{``Từ khóa này nằm ở đâu trong kho dữ liệu?''}, thay vì \textit{``Kho dữ liệu này chứa những gì?''}.
+
+Cấu trúc này hoạt động như một chiếc bản đồ hai chiều, trong đó mỗi thuật ngữ giữ vai trò như một cổng chỉ dẫn, mở ra một danh sách các tài liệu liên quan -- một cách tiếp cận vừa tinh gọn, vừa giàu hiệu quả, đặc biệt trong những kho văn bản có quy mô lớn và yêu cầu truy xuất nhanh chóng, chính xác.
+
+Quy trình xây dựng một chỉ mục đảo được tiến hành theo từng bước rõ ràng và chặt chẽ. Đầu tiên, hệ thống sẽ \textbf{quét toàn bộ tập tài liệu}, tiến hành xử lý văn bản để thu thập ra danh sách các từ đơn lẻ, đã được chuẩn hóa. Tại bước này, những thuật ngữ đã từng được xét và đã được đưa vào chỉ mục sẽ được \textbf{loại bỏ}, tránh việc lặp lại không cần thiết, qua đó đảm bảo tính hiệu quả trong lưu trữ và truy xuất.
+
+Tiếp theo, với danh sách các từ khóa còn lại -- tức là các thuật ngữ duy nhất -- hệ thống sẽ \textbf{tạo lập một bảng ánh xạ}, trong đó mỗi từ khóa sẽ liên kết đến một tập hợp các tài liệu mà nó xuất hiện. Đây chính là phần cốt lõi của chỉ mục ngược: \textit{mỗi từ khóa là một nút trung tâm, được nối với các tài liệu liên quan như những nhánh cây lan tỏa trong rừng dữ liệu}.
+
+Quy trình này sẽ được \textbf{lặp lại tuần tự} cho đến khi toàn bộ tài liệu trong kho dữ liệu được xử lý và mọi thuật ngữ tiềm năng đều đã được ánh xạ một cách đầy đủ. Kết quả cuối cùng là một cấu trúc chỉ mục vững chắc, cho phép các thao tác truy vấn về sau diễn ra không chỉ nhanh mà còn có tính định hướng cao, như thể ta đang tra cứu một từ điển chuyên biệt mà mỗi mục từ lại chính là cánh cổng dẫn tới tri thức tiềm ẩn trong vô vàn trang văn bản.

@@ -1,0 +1,26 @@
+\subsubsection{Term Frequency -- Inverse Document Frequency (TF-IDF)}
+\textbf{TF-IDF} là một kỹ thuật thống kê phổ biến và hiệu quả trong lĩnh vực xử lý ngôn ngữ tự nhiên và khai thác dữ liệu văn bản, nhằm đo lường mức độ \textbf{quan trọng} của một thuật ngữ đối với một tài liệu trong toàn bộ bộ sưu tập dữ liệu (corpus).
+
+Phương pháp này kết hợp hai thành phần trọng yếu:
+
+\begin{itemize}
+    \item \textbf{Term Frequency (TF)}, biểu thị tần suất xuất hiện của một từ hoặc cụm từ trong một tài liệu cụ thể.
+    \item \textbf{Inverse Document Frequency (IDF)}, phản ánh mức độ \textbf{hiếm} của từ đó trong toàn bộ tập tài liệu, qua việc sử dụng hàm logarit của tỷ lệ giữa tổng số tài liệu và số tài liệu chứa từ đó.
+\end{itemize}
+
+Công thức chung được xây dựng dưới dạng:
+
+\begin{equation}
+    \text{TF-IDF}(t, d, D) = \text{TF}(t, d) \cdot \text{IDF}(t, D)
+\end{equation}
+
+trong đó:
+
+\begin{itemize}
+    \item \(\text{TF}(t,d)\) là tỷ lệ giữa số lần từ \(t\) xuất hiện trong tài liệu \(d\) và tổng số từ trong \(d\);
+    \item \(\text{IDF}(t,D) = \log\frac{N}{n_t}\), với \(N\) là tổng số tài liệu trong tập dữ liệu \(D\), và \(n_t\) là số tài liệu chứa ít nhất một lần từ \(t\).
+\end{itemize}
+
+Về mặt ngữ nghĩa, TF-IDF giúp \textbf{làm sáng} những từ khóa có tần suất cao trong từng tài liệu cụ thể (qua TF), đồng thời \textbf{hạ thấp vai trò của những từ phổ thông}, xuất hiện rộng khắp trong corpus (qua IDF). Kết quả thu được là một đại lượng trọng số, cho biết \textbf{độ quan trọng tổng hòa} của thuật ngữ đó trong ngữ cảnh của tài liệu lẫn toàn bộ tập hợp văn bản.
+
+Nhờ khả năng cân bằng giữa tần suất nội dung và mức độ phân biệt khắp bộ dữ liệu, TF-IDF trở thành một công cụ đắc lực được ứng dụng trong các hệ thống tìm kiếm, phân loại văn bản, trích xuất đặc trưng từ dữ liệu văn bản, và nhiều ứng dụng NLP khác, giúp nâng cao độ chính xác và mức độ thẩm thấu sâu sắc của các mô hình truy xuất thông tin.

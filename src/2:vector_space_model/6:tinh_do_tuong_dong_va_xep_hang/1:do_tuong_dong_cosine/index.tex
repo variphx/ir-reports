@@ -1,0 +1,12 @@
+\subsection{Độ tương đồng cosine}
+Độ đo tương đồng cosine, hay còn gọi là \textit{cosine similarity}, là một phương pháp hình học được áp dụng phổ biến trong các mô hình không gian vector nhằm định lượng mức độ tương đồng giữa hai vector trong một không gian nhiều chiều. Trong lĩnh vực xử lý ngôn ngữ tự nhiên, phương pháp này đặc biệt hữu ích trong việc đánh giá mức độ tương quan về ngữ nghĩa giữa hai văn bản, nhờ khả năng phản ánh định hướng của các vector hơn là độ lớn tuyệt đối của chúng.
+
+Cosine similarity được định nghĩa dựa trên góc giữa hai vector trong không gian: khi hai vector cùng hướng, góc giữa chúng nhỏ, và độ đo cosine tiến gần đến 1; khi hai vector vuông góc, góc là 90 độ, cosine bằng 0, cho thấy sự không tương đồng; và nếu chúng ngược hướng, cosine đạt giá trị -1, phản ánh một mức độ tương phản hoàn toàn. Công thức tính cosine similarity giữa hai vector A và B được viết dưới dạng:
+
+\begin{equation}
+\text{cosine\_similarity}(A, B) = \frac{A \cdot B}{\|A\| \times \|B\|}
+\end{equation}
+
+trong đó \(A \cdot B\) là tích vô hướng giữa hai vector, còn \(|A|\) và \(|B|\) là độ dài (chuẩn Euclid) của hai vector tương ứng. Giá trị kết quả luôn nằm trong đoạn \([-1, 1]\), phản ánh trực quan mối quan hệ định hướng giữa hai thực thể trong không gian biểu diễn.
+
+Chính vì khả năng bỏ qua sự khác biệt về độ dài và tập trung vào hướng chung của các vector, cosine similarity đã trở thành một công cụ trọng yếu trong các bài toán như tìm kiếm thông tin, phân loại văn bản, gợi ý nội dung và các ứng dụng khác trong khai phá dữ liệu văn bản.

@@ -1,0 +1,15 @@
+\section{Nhận xét}
+Dưới ánh sáng của quá trình khảo cứu toàn diện về mô hình Không gian Vector (\textit{Vector Space Model}), ta có thể đi đến một cái nhìn tổng thể về những khả năng cốt lõi mà mô hình này mang lại cho nhiệm vụ truy vấn thông tin trong các hệ thống hiện đại. Trước hết, mô hình cho phép thực hiện việc \textbf{xếp hạng các kết quả truy vấn} một cách linh hoạt và định lượng -- nghĩa là không chỉ xác định xem một tài liệu có liên quan hay không, mà còn cho phép đo lường mức độ liên quan ấy để sắp xếp tài liệu theo trật tự ưu tiên. Đây là một điểm mạnh nổi bật so với các mô hình nhị phân cổ điển.
+
+Mặt khác, cả \textbf{tài liệu và câu truy vấn đều được mô hình hóa dưới dạng các vector số thực} trong một không gian nhiều chiều, trong đó mỗi chiều đại diện cho một \textit{term} (thuật ngữ chỉ mục) trong tập từ vựng đã được chuẩn hóa và thống nhất. Việc biểu diễn như vậy không chỉ giúp tiêu chuẩn hóa cách thức hệ thống nhìn nhận các thực thể ngôn ngữ, mà còn mở đường cho các phép toán đại số tuyến tính có thể được áp dụng một cách hiệu quả để phân tích mối quan hệ giữa các văn bản.
+
+\textbf{Mỗi chiều của vector đại diện cho một chỉ mục cụ thể}, và giá trị trên chiều ấy -- hay còn gọi là trọng số -- là một số thực phản ánh \textbf{mức độ quan trọng của thuật ngữ đó trong ngữ cảnh của văn bản hoặc câu truy vấn}. Những trọng số này, thường được tính bằng các công thức như TF, IDF hay TF-IDF, là nền tảng để tạo ra các biểu diễn giàu thông tin.
+
+Từ những biểu diễn này, mô hình sử dụng \textbf{độ đo cosine} để xác định \textbf{độ tương đồng giữa hai vector}, chính là giữa truy vấn và tài liệu. Phép đo này phản ánh mức độ định hướng tương đồng giữa hai thực thể trong không gian ngữ nghĩa, cho phép suy ra mức độ liên quan một cách mượt mà và hình học.
+
+Không dừng lại ở đó, vì mọi thực thể đều được quy đổi về dạng vector -- dù là tài liệu, truy vấn, hay thậm chí là một câu văn đơn lẻ -- nên \textbf{mọi vector trong hệ thống đều có thể được đem ra so sánh trực tiếp với nhau về mặt ngữ nghĩa}. Điều này mở ra một không gian thao tác phong phú, nơi các thực thể ngôn ngữ được phân tích như các điểm hình học, giúp hệ thống truy xuất vận hành theo lối tư duy toán học chính xác và nhất quán.
+
+Qua toàn bộ tiến trình nghiên cứu, có thể thấy rõ rằng mô hình Không gian Vector không chỉ đơn thuần là một kỹ thuật biểu diễn, mà còn là một triết lý mô hình hóa ngôn ngữ -- nơi văn bản được hiểu như những vector sống động, sẵn sàng được so sánh, xếp hạng và suy diễn trong một vũ trụ hình học đầy tiềm năng. Những ưu điểm và hạn chế cụ thể của mô hình sẽ được trình bày chi tiết hơn ở phần sau, nhằm tiếp tục làm rõ vị thế của mô hình này trong hệ sinh thái truy xuất thông tin hiện đại
+
+\input{src/2:vector_space_model/7:nhan_xet/1:uu_diem/index.tex}
+\input{src/2:vector_space_model/7:nhan_xet/2:nhuoc_diem/index.tex}

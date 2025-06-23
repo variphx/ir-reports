@@ -1,0 +1,83 @@
+\subsubsection{Vector hóa tài liệu và truy vấn}
+Một điểm cần đặc biệt lưu ý trong toàn bộ quy trình tiền xử lý và biểu diễn dữ liệu là cả tài liệu (\textit{document}) và câu truy vấn (\textit{query}) đều phải được biến đổi và ánh xạ về dạng vector theo cùng một phương pháp thống nhất. Điều này xuất phát từ yêu cầu tất yếu của tính đồng nhất trong không gian biểu diễn: nếu hai thực thể không được xử lý đồng nhất, các thuật ngữ (terms) xuất hiện trong truy vấn có thể không tương thích hoặc không trùng khớp với các thuật ngữ trong tài liệu, dẫn đến việc suy giảm nghiêm trọng hiệu quả truy xuất thông tin. Việc chuẩn hóa biểu diễn không chỉ đảm bảo sự tương thích giữa truy vấn và tài liệu, mà còn nâng cao độ chính xác trong việc tính toán độ tương đồng và xếp hạng kết quả.
+
+Xét một ví dụ minh họa để làm rõ tầm quan trọng của việc áp dụng quy trình tiền xử lý một cách nhất quán giữa tài liệu và truy vấn. Giả sử ta có hai tài liệu và một câu truy vấn, đồng thời sử dụng một tập từ dừng (\textit{stopwords}) được rút gọn từ danh sách tiếng Anh trong thư viện NLTK.
+
+Cụ thể, hai tài liệu được giữ nguyên mà không loại bỏ từ dừng:
+
+\begin{itemize}
+    \item \textit{doc1}: \textit{what have i done and why who s this}
+    \item \textit{doc2}: \textit{what have you done}
+\end{itemize}
+
+Trong khi đó, câu truy vấn có hai phiên bản:
+
+\begin{itemize}
+    \item \textit{query1} (chưa loại bỏ stopwords): \textit{what have i done}
+    \item \textit{query2} (đã loại bỏ stopwords): \textit{done}
+\end{itemize}
+
+Với \textit{query1}, hệ thống có thể xếp hạng \textit{doc1} cao hơn \textit{doc2} vì toàn bộ các term trong truy vấn đều được tìm thấy đầy đủ trong \textit{doc1}, tạo ra một mức độ tương đồng ngữ nghĩa cao hơn. Ngược lại, với \textit{query2}, khi chỉ còn lại từ khóa ``\textit{done}'', cả hai tài liệu đều chứa từ này, dẫn đến việc hệ thống đánh giá chúng ngang nhau về mặt liên quan -- làm giảm độ chính xác trong việc lựa chọn tài liệu phù hợp nhất.
+
+Tình huống này cho thấy nếu quá trình xử lý được áp dụng không đồng đều giữa truy vấn và tài liệu -- trong trường hợp này là chỉ loại bỏ stopwords ở truy vấn -- thì hiệu quả truy xuất thông tin có thể bị suy giảm đáng kể. Do đó, việc đảm bảo một quy trình xử lý thống nhất giữa hai thực thể này là điều kiện tiên quyết để duy trì tính nhất quán và độ chính xác trong các mô hình truy xuất thông tin hiện đại.
+
+Dưới đây là một ví dụ điển hình về việc gán trọng số TF-IDF cho một tập tài liệu và một truy vấn cụ thể bằng tiếng Anh:
+
+Giả sử chúng ta có ba tài liệu trong corpus:
+
+\begin{table}[H]
+    \caption{Ví dụ tài liệu cần gán trọng số}
+    \begin{center}
+        \begin{tabularx}{0.7\linewidth}{l || X}
+            \toprule
+            \textbf{Tài liệu} & \textbf{Nội dung}           \\
+            \midrule\midrule
+            \(d_1\)           & The cat sat on the mat      \\
+            \(d_2\)           & My dog and cat are the best \\
+            \(d_3\)           & The locals are playing      \\
+            \bottomrule
+        \end{tabularx}
+    \end{center}
+\end{table}
+
+Và một truy vấn đơn giản:
+
+\begin{center}
+    \textbf{``The cat''}
+\end{center}
+
+Bước đầu tiên, chúng ta biểu diễn mỗi tài liệu và truy vấn dưới dạng vector TF-IDF. Ví dụ, tính TF-IDF cho các từ trong truy vấn như sau:
+
+\begin{itemize}
+    \item \(\text{TF}(\text{``cat''}, d_{1}) = \frac{1}{6}\); \(\text{IDF}(\text{``cat''}) = \log\left(\frac{3}{2}\right) \approx 0.18\), nên \(\text{TF-IDF} \approx 0.03\)
+    \item \(\text{TF}(\text{``cat''}, d_{2}) = \frac{1}{7}\); \(\text{IDF}(\text{``cat''}) = 0.18\); \(\text{TF-IDF} \approx 0.025\)
+    \item \(\text{TF}(\text{``cat''}, d_{3}) = 0\); nên \(\text{TF-IDF} = 0\)
+\end{itemize}
+
+Trong khi đó, từ ``the'' có IDF = \(\log(\frac{3}{3})\) = 0, dẫn đến TF-IDF luôn bằng 0, bất kể tài liệu nào chứa từ này.
+
+Sau khi tính toán, chúng ta được hai vector TF-IDF:
+
+\begin{table}[H]
+    \caption{Giá trị TF-IDF lập theo term cho từng tài liệu}
+    \begin{tabularx}{\linewidth}{l || X X X l}
+        \toprule
+        \textbf{Term} & \textbf{\(d_1\) TF-IDF} & \textbf{\(d_2\) TF-IDF} & \textbf{\(d_3\) TF-IDF} & \textbf{Query TF-IDF} \\
+        \midrule\midrule
+        \textbf{the}  & 0                       & 0                       & 0                       & 0                     \\
+        \textbf{cat}  & 0.0306                  & 0.0252                  & 0                       & 0.18                  \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+Tiếp theo, biểu diễn truy vấn ``The cat'' cũng dưới dạng TF-IDF vector — ở đây, ``cat'' nhận trọng số \~0.18, còn ``the'' vẫn là 0.
+
+Cuối cùng, hệ thống tính \textbf{độ tương đồng cosine} giữa vector truy vấn và từng vector tài liệu, rồi xếp hạng dựa trên giá trị đó:
+
+\begin{enumerate}
+    \item \(d_{1}\) -- có độ tương đồng cao nhất (vì chứa đầy đủ cả hai term),
+    \item \(d_{2}\) -- là lựa chọn thứ hai,
+    \item \(d_{3}\) -- đứng cuối cùng.
+\end{enumerate}
+
+Thông qua ví dụ này, chúng ta thấy rõ cách TF-IDF không chỉ phản ánh sự hiện diện của từ trong tài liệu, mà còn điều chỉnh theo mức độ phân bố của từ đó trong toàn bộ tập dữ liệu. Kết quả là, những thuật ngữ đặc trưng hơn cho một chủ đề sẽ được hệ thống ưu tiên đánh trọng số -- và từ đó, truy vấn ``The cat'' cũng dẫn đến kết quả chính xác và có ý nghĩa hơn.

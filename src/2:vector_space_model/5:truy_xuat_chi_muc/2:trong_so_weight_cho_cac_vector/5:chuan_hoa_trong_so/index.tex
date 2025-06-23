@@ -1,0 +1,14 @@
+\subsubsection{Chuẩn hóa trọng số}
+Chuẩn hóa trọng số, hay còn gọi là \textit{normalize}, là một bước tinh tế nhưng thiết yếu trong tiến trình biểu diễn văn bản dưới dạng vector trọng số, nhằm đảm bảo rằng mọi tài liệu, bất kể độ dài, đều được định lượng một cách công bằng và đồng nhất trong không gian truy xuất. Khi biểu diễn các tài liệu hoặc truy vấn bằng vector, nếu không có bước chuẩn hóa, các tài liệu dài với nhiều lần lặp lại của các term sẽ có xu hướng chiếm ưu thế không công bằng so với các tài liệu ngắn hơn, mặc dù có thể mức độ liên quan của chúng lại không thực sự cao hơn. Bằng cách đưa các trọng số về cùng một miền giá trị chuẩn hóa -- thường là đoạn \([0, 1]\) -- ta không những làm giảm ảnh hưởng không mong muốn của độ dài tài liệu, mà còn biến đổi các vector thành các đại diện đơn vị, có độ dài bằng 1 và cùng phương hướng trong không gian vector chuẩn. Điều này tạo điều kiện thuận lợi cho việc áp dụng các phép đo như cosine similarity, vì mọi phép đo khi đó chỉ còn phụ thuộc vào hướng của vector -- tức là nội dung ngữ nghĩa -- thay vì độ lớn của nó. Về mặt kỹ thuật, một trong những công thức chuẩn hóa trọng số thường dùng là:
+
+\begin{equation}
+    w_{ik} = \frac{tf_{ik} \cdot idf_{ik}}{\sqrt{\sum_{k=1}^{N} (tf_{ik} \cdot idf_{ik})^2}}
+\end{equation}
+
+trong đó \(w_{ik}\) là trọng số chuẩn hóa của term \(k\) trong tài liệu \(i\), đảm bảo rằng tổng bình phương các trọng số của mọi term trong một document sẽ luôn bằng 1. Ngoài ra, trong thực tiễn triển khai, người ta còn sử dụng những phương pháp chuẩn hóa khác như hệ thống S.M.A.R.T., trong đó trọng số được xác định theo công thức:
+
+\begin{equation}
+    w_{kd} = collect_k \cdot fred_{kd} \cdot \frac{1}{norm}
+\end{equation}
+
+với mỗi biến số phản ánh các yếu tố đặc trưng trong mối quan hệ giữa term, tài liệu và tập hợp tài liệu. Những phương pháp như vậy giúp điều chỉnh độ quan trọng của từ khóa không chỉ dựa vào tần suất xuất hiện, mà còn kết hợp với các yếu tố về ngữ cảnh và phân bố để nâng cao tính chính xác và công bằng trong hệ thống truy xuất thông tin.

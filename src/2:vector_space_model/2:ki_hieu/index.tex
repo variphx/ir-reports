@@ -1,0 +1,28 @@
+\section{Kí hiệu}
+Trong mô hình không gian vector -- một phương pháp mang tính hình học và đại số trong lĩnh vực truy xuất thông tin -- việc xây dựng một hệ thống biểu diễn trừu tượng là điều kiện tiên quyết để có thể xử lý, đo lường và so sánh các thực thể ngôn ngữ một cách hệ thống và hiệu quả. Để làm được điều này, một tập hợp các ký hiệu và định nghĩa chuẩn tắc được sử dụng nhằm mô hình hóa các yếu tố chính tham gia vào quá trình truy vấn và truy xuất.
+
+Trước hết, khái niệm \textbf{vocabulary} (tập từ vựng) được định nghĩa là tập hợp tất cả các thuật ngữ (\textit{term}) riêng biệt xuất hiện trong toàn bộ tập tài liệu. Ta ký hiệu tập từ vựng này là \(V = \{t_1, t_2, t_3, \dots, t_N\}\), trong đó $N$ là tổng số lượng từ khóa khác nhau được trích xuất từ toàn bộ corpus. Tập từ vựng này chính là không gian hình học của mô hình, nơi mỗi chiều trong không gian đại diện cho một thuật ngữ duy nhất.
+
+Tiếp theo, một \textbf{document} (tài liệu) bất kỳ được biểu diễn như một vector trong không gian từ vựng, có dạng:
+
+\begin{equation}
+    d_i = \{d_{i1}, d_{i2}, d_{i3}, \dots, d_{iN}\}
+\end{equation}
+
+Trong đó, mỗi thành phần \(d_{ij}\) đại diện cho trọng số của thuật ngữ \(t_j\) trong tài liệu \(d_i\). Tập hợp tất cả các tài liệu tạo thành \textbf{collection} -- ký hiệu là \(C = \{d_1, d_2, d_3, \dots, d_M\}\), trong đó \(M\) là tổng số lượng tài liệu trong hệ thống.
+
+Tương tự như tài liệu, một \textbf{query} (câu truy vấn) cũng được ánh xạ vào không gian vector với cấu trúc:
+
+\begin{equation}
+    q = \{q_1, q_2, q_3, \dots, q_N\}
+\end{equation}
+
+Mỗi thành phần \(q_j\) là trọng số biểu diễn mức độ quan trọng của từ khóa \(t_j\) trong truy vấn. Việc biểu diễn đồng nhất này cho phép truy vấn và tài liệu được so sánh trực tiếp thông qua các phép toán tuyến tính.
+
+Để đo lường mức độ tương đồng giữa một tài liệu và một truy vấn, ta sử dụng hàm \textbf{Rel(q, d)} -- biểu diễn \textit{độ liên quan} giữa tài liệu \(d\) và truy vấn \(q\). Mức độ này thường được tính bằng các hàm tương đồng như cosine similarity hoặc các hàm khoảng cách.
+
+Để thực hiện phép tính này, trước hết ta cần các hàm biểu diễn cho truy vấn và tài liệu, ký hiệu lần lượt là \textbf{Rep(q)} và \textbf{Rep(d)}. Hai hàm này chính là cơ chế ánh xạ thông tin ngôn ngữ sang biểu diễn toán học -- từ hình thức biểu đạt bằng chữ sang dạng số có thể xử lý được bởi hệ thống máy tính.
+
+Cuối cùng, một thành phần quan trọng khác trong hạ tầng của mô hình là \textbf{dictionary} (từ điển). Đây là một cấu trúc dữ liệu chuyên biệt -- thường được xây dựng dưới dạng bảng băm hoặc cây tìm kiếm -- nhằm tổ chức, lưu trữ và truy xuất nhanh chóng các thuật ngữ và thông tin liên quan của chúng. Dictionary đóng vai trò xương sống trong quá trình lập chỉ mục và tìm kiếm, giúp cải thiện đáng kể hiệu suất hệ thống cả về thời gian xử lý lẫn tài nguyên sử dụng.
+
+Tựu trung, việc quy ước và chuẩn hóa các khái niệm trong mô hình không gian vector không chỉ giúp mô hình hóa rõ ràng các yếu tố ngôn ngữ, mà còn mở đường cho việc xử lý truy vấn một cách chính xác và có hệ thống -- nơi ngôn ngữ được ``giải nghĩa'' bằng hình học, và tri thức được ``đo lường'' bằng các đại lượng số học tinh tế.

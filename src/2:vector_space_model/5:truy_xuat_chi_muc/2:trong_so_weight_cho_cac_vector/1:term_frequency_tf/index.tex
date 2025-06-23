@@ -1,0 +1,11 @@
+\subsubsection{Term Frequency (TF)}
+Trong lĩnh vực xử lý ngôn ngữ tự nhiên và khai thác dữ liệu văn bản, \textbf{tần số thuật ngữ (Term Frequency – TF)} là một đại lượng cơ bản nhưng mang giá trị cốt lõi trong việc định lượng mức độ xuất hiện của một từ hoặc cụm từ trong một tài liệu nhất định. Khái niệm này đóng vai trò như một chỉ số phản ánh \textbf{mức độ nổi bật nội tại} của thuật ngữ trong bối cảnh của tài liệu đó, từ đó góp phần xác định tầm quan trọng tương đối của nó so với các thuật ngữ khác cùng tồn tại trong văn bản.
+
+Về mặt hình thức, term frequency được tính bằng cách \textbf{lấy số lần xuất hiện thực tế của một từ khóa} trong tài liệu, sau đó \textbf{chia cho tổng số từ} trong tài liệu đó. Tỷ lệ này mang ý nghĩa thống kê rõ rệt: một từ xuất hiện với tần suất cao trong một văn bản cụ thể nhiều khả năng sẽ đóng vai trò then chốt trong việc phản ánh nội dung hoặc chủ đề mà tài liệu đề cập tới. Ngược lại, những từ hiếm gặp – nếu xuất hiện – sẽ chỉ chiếm một phần rất nhỏ trong tổng thể và do đó có chỉ số TF thấp hơn. \cite{manning2008introduction}
+
+Công thức thường thấy cho TF \cite{manning2008introduction}:
+\begin{equation}
+    tf(t, d) = \frac{f_{t, d}}{\sum_{t'}f_{t', d}}
+\end{equation}
+
+Chính vì đặc tính tỷ lệ này, TF không chỉ đơn thuần là một con số, mà là một \textbf{dạng lượng hóa ý nghĩa ngôn ngữ}, cho phép mô hình hóa văn bản như một cấu trúc số liệu mà ở đó các đơn vị từ vựng được định vị và định lượng một cách khách quan. Trong thực tế, TF là thành phần quan trọng trong nhiều hệ thống đánh giá thông tin, đặc biệt là khi kết hợp với các cơ chế khác nhằm hiệu chỉnh ảnh hưởng lan rộng của từ trong toàn bộ tập tài liệu.

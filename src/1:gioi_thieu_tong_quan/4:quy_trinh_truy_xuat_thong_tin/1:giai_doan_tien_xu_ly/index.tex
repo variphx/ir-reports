@@ -1,0 +1,20 @@
+\subsection{Giai đoạn tiền xử lý}
+\textbf{Truy xuất thông tin} là hành trình khám phá tri thức, nơi hệ thống phải lựa chọn những mảnh ghép có liên quan nhất từ một biển dữ liệu khổng lồ. Trong quá trình đó, \textbf{tiền xử lý văn bản} nổi lên như một bước đi tất yếu và tinh tế, đóng vai trò là chiếc cầu nối giữa ngôn ngữ tự nhiên phức tạp và cấu trúc dữ liệu được chuẩn hóa -- thứ mà các mô hình truy xuất có thể dễ dàng tiếp cận và xử lý.
+
+Ở giai đoạn này, trước khi bất kỳ thuật toán nào có thể hoạt động hiệu quả, mỗi tài liệu đều phải trải qua một chuỗi các biến đổi có hệ thống. Từ việc \textbf{phân tích từ vựng}, \textbf{loại bỏ stopwords} cho đến thao tác \textbf{đưa từ về dạng gốc} như \textit{stemming} hay \textit{lemmatization}, mọi bước đều được thực hiện nhằm làm mềm hóa cấu trúc ngôn ngữ, chuyển hóa các biểu hiện ngữ nghĩa phong phú của văn bản thành dạng chuẩn hóa -- một hình thức tinh gọn nhưng vẫn giữ được linh hồn thông tin cốt lõi.
+
+Kết quả của quá trình này là một tập dữ liệu mới, nơi các từ khóa đã được chuyển đổi thành những đơn vị biểu diễn ngữ nghĩa thống nhất. Không còn sự rườm rà của cú pháp, không còn những nhiễu loạn đến từ các hình thức từ ngữ khác nhau, chỉ còn lại một nền tảng ổn định, tinh giản và giàu tiềm năng để mô hình truy xuất tiếp cận, so sánh và phân tích.
+
+Quá trình \textbf{đánh chỉ mục}, diễn ra ngay sau tiền xử lý, sẽ sử dụng tập dữ liệu đã được làm sạch này để tạo ra một biểu diễn nội tại cho mỗi tài liệu. Nhờ đó, hệ thống truy xuất không còn phải dò tìm từng từ một trong mê cung văn bản ban đầu, mà có thể dựa vào một cấu trúc định vị hiệu quả -- như một bản đồ rút gọn dẫn đến thông tin mục tiêu.
+
+Lợi ích của tiền xử lý văn bản không chỉ dừng lại ở hiệu quả hệ thống, mà còn chạm đến bản chất của việc hiểu ngôn ngữ trong không gian số:
+
+\begin{itemize}
+    \item \textbf{Tối ưu hóa tốc độ truy xuất}: khi văn bản được làm gọn và thống nhất, các thao tác tính toán trở nên nhẹ nhàng hơn, giảm bớt đáng kể thời gian truy vấn mà không làm mất đi giá trị thông tin.
+    \item \textbf{Cải thiện độ chính xác}: những từ ngữ dư thừa, lặp lại, hay chỉ có tính chức năng (như \textit{a}, \textit{the}, \textit{is}, \dots) được loại bỏ, nhường chỗ cho những từ khóa giàu ý nghĩa -- qua đó giúp mô hình đưa ra kết quả sát hơn với ý định thực sự của người dùng.
+    \item \textbf{Tăng tính nhất quán}: khi tất cả các biến thể của một từ được quy về cùng một gốc, hệ thống có thể xử lý các biểu hiện khác nhau của cùng một khái niệm theo một cách đồng bộ -- điều kiện tiên quyết để đảm bảo sự công bằng và chính xác trong so sánh.
+    \item \textbf{Giảm thiểu nhiễu}: những yếu tố không mang giá trị phân biệt -- các ký tự đặc biệt, lỗi chính tả, từ vô nghĩa -- đều bị loại bỏ, mang đến một dòng dữ liệu trong sạch hơn để phân tích.
+    \item \textbf{Tăng khả năng tìm kiếm}: khi từ đồng nghĩa, từ viết tắt hoặc từ viết sai chính tả được chuẩn hóa, hệ thống truy xuất sẽ có cơ hội mở rộng phạm vi hiểu biết của mình, từ đó tăng khả năng thu thập đúng thông tin dù đầu vào không hoàn hảo.
+\end{itemize}
+
+Tựu trung lại, \textbf{tiền xử lý văn bản không chỉ là một bước kỹ thuật}, mà còn là sự tinh luyện ngôn ngữ -- một quá trình chắt lọc, gọt giũa văn bản từ hình thức tự nhiên đầy biến hóa trở thành cấu trúc tinh giản và sẵn sàng phục vụ mục tiêu cuối cùng: \textbf{truy xuất thông tin nhanh chóng, chính xác và nhất quán}. Đó là tiền đề không thể thiếu cho mọi hệ thống truy vấn hiện đại -- nơi hiệu quả kỹ thuật được xây dựng từ sự nhạy bén ngôn ngữ

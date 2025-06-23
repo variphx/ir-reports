@@ -1,0 +1,19 @@
+\subsubsection{Inverse Document Frequency}
+Trong lĩnh vực xử lý ngôn ngữ tự nhiên và khai phá dữ liệu văn bản, \textbf{Inverse Document Frequency (IDF)} là một đại lượng thống kê mang tính nền tảng, được thiết kế để định lượng \textbf{độ hiếm tương đối} của một từ hoặc cụm từ trong toàn bộ tập hợp tài liệu. Nếu như \textbf{Term Frequency (TF)} phản ánh mức độ phổ biến của một thuật ngữ trong nội bộ một tài liệu cụ thể, thì \textbf{IDF} lại đo lường \textbf{khả năng phân biệt} của thuật ngữ đó trên bình diện toàn cục -- tức là, trong phạm vi toàn bộ tập tài liệu đang xét.
+
+Ý tưởng trung tâm của IDF nằm ở chỗ: những từ ngữ xuất hiện trong rất nhiều tài liệu - như các từ chức năng hoặc từ phổ thông -- thường không cung cấp nhiều giá trị thông tin cho quá trình phân loại hay truy xuất. Ngược lại, một từ xuất hiện \textbf{hiếm hoi nhưng đều đặn} chỉ trong một số ít tài liệu sẽ mang hàm lượng thông tin cao hơn, vì nó có thể giúp \textbf{phân biệt rõ ràng} các chủ đề hoặc nội dung khác nhau.
+
+Về mặt hình thức, IDF của một từ được tính bằng \textbf{logarithm} của tỉ số giữa tổng số tài liệu trong tập dữ liệu và số lượng tài liệu trong đó từ đó xuất hiện ít nhất một lần:
+
+\begin{equation}
+    \text{IDF}(t) = \log \left( \frac{N}{n} \right)
+\end{equation}
+
+trong đó:
+
+\begin{itemize}
+    \item \(N\) là tổng số tài liệu trong tập dữ liệu,
+    \item \(n\) là số tài liệu mà từ \(t\) xuất hiện ít nhất một lần.
+\end{itemize}
+
+Giá trị của hàm logarit trong công thức trên không chỉ giúp làm trơn phân phối tần suất mà còn bảo đảm rằng IDF không tăng quá nhanh đối với những từ cực hiếm -- giữ cho thang đo luôn trong giới hạn kiểm soát được. Khi được kết hợp cùng TF trong công thức \textbf{TF-IDF}, IDF góp phần làm nổi bật các từ ngữ không chỉ xuất hiện thường xuyên trong một tài liệu, mà còn đồng thời \textbf{ít phổ biến trong toàn bộ tập hợp} -- từ đó nâng cao độ chính xác và sắc thái ngữ nghĩa trong các mô hình truy xuất thông tin hiện đại.

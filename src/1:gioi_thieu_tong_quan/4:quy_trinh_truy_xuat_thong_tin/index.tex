@@ -1,0 +1,18 @@
+\section{Quy trình truy xuất thông tin}
+Quy trình truy xuất thông tin được tổ chức thành nhiều bước lớn nhỏ khác nhau, nhưng tổng quát có thể chia thành ba giai đoạn chính:
+
+\begin{itemize}
+    \item Giai đoạn tiền xử lý,
+    \item Giai đoạn lập chỉ mục,
+    \item Giai đoạn xử lý truy vấn, truy xuất chỉ mục và xếp hạng kết quả.
+\end{itemize}
+
+Trước khi bắt đầu quá trình truy xuất thông tin, điều đầu tiên cần làm là xác định rõ loại tài liệu sẽ được truy xuất, có thể là văn bản, hình ảnh, video hay âm thanh. Tiếp đến, ta lựa chọn thuật toán truy xuất phù hợp với loại tài liệu đó, đồng thời tiến hành các bước xử lý và chuyển đổi tài liệu gốc sao cho phù hợp với mô hình truy xuất đã chọn.
+
+Sau đó, cần xây dựng hệ thống chỉ mục (indexing) nhằm tăng hiệu quả và tốc độ trong việc tìm kiếm thông tin. Khi hệ thống chỉ mục đã sẵn sàng, bước tiếp theo là xử lý truy vấn. Khi người dùng nhập vào một truy vấn -- thể hiện nhu cầu thông tin của họ -- truy vấn này sẽ được phân tích, chuyển đổi về định dạng tương thích với mô hình hệ thống.
+
+Lúc này, hệ thống sẽ thực hiện việc so khớp truy vấn với chỉ mục đã tạo, tính toán mức độ liên quan, và truy xuất các tài liệu phù hợp. Cuối cùng, các tài liệu này sẽ được sắp xếp theo độ phù hợp (ranking) và hiển thị cho người dùng
+
+\input{src/1:gioi_thieu_tong_quan/4:quy_trinh_truy_xuat_thong_tin/1:giai_doan_tien_xu_ly/index.tex}
+\input{src/1:gioi_thieu_tong_quan/4:quy_trinh_truy_xuat_thong_tin/2:giai_doan_lap_chi_muc/index.tex}
+\input{src/1:gioi_thieu_tong_quan/4:quy_trinh_truy_xuat_thong_tin/3:giai_doan_truy_van/index.tex}
