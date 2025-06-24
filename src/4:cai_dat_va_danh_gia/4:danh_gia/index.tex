@@ -1,0 +1,15 @@
+\section{Đánh giá}
+Kết quả thực nghiệm cho thấy mô hình học sâu dựa trên embedding ngữ nghĩa tỏ ra vượt trội so với mô hình truyền thống VSM trong hầu hết các chỉ số đánh giá. Cụ thể:
+
+\begin{itemize}
+\item \textbf{Precision@10} tăng từ \textbf{0.2271} (VSM) lên \textbf{0.2489} (Neural Model) -- tương ứng với mức tăng gần 10\%, phản ánh số lượng tài liệu liên quan trong top 10 kết quả truy xuất được cải thiện rõ rệt.
+\item \textbf{Recall@10} tăng từ \textbf{0.3922} lên \textbf{0.4177}, cho thấy hệ thống sử dụng embedding có khả năng bao phủ nhiều tài liệu liên quan hơn trong tập kết quả đầu ra.
+
+\item Đáng chú ý nhất là chỉ số \textbf{Mean Average Precision (MAP)} -- một thước đo quan trọng phản ánh độ chính xác tổng thể trên toàn bộ truy vấn -- đã tăng từ \textbf{0.2685} lên \textbf{0.3264}, tương ứng mức cải thiện hơn \textbf{21\%}. Điều này chứng minh rằng mô hình embedding không chỉ tốt hơn ở các kết quả đầu tiên mà còn duy trì hiệu quả truy xuất ổn định trên toàn bộ danh sách kết quả.
+\end{itemize}
+
+Sự khác biệt này đến từ cách biểu diễn dữ liệu: trong khi VSM sử dụng biểu diễn rời rạc dựa trên từ vựng và trọng số thống kê (như TF-IDF), thì mô hình học sâu tạo ra các vector biểu diễn ngữ nghĩa đậm đặc (dense embeddings), có khả năng học được mối liên hệ ngữ cảnh giữa các từ và câu. Nhờ vậy, hệ thống có thể nhận diện các văn bản liên quan ngay cả khi không chứa trực tiếp các từ khóa trong truy vấn, điều mà VSM khó làm được do tính chất từ khóa trực tiếp (keyword-matching).
+
+Bên cạnh đó, khả năng tổng quát hóa của mô hình neural network cũng được cải thiện nhờ vào việc mô hình được huấn luyện trên các tập dữ liệu lớn trước đó (pretrained), giúp nắm bắt các mối quan hệ ngữ nghĩa phức tạp giữa các từ. Điều này đặc biệt hữu ích khi làm việc với các truy vấn ngắn, mơ hồ hoặc mang tính khái quát -- vốn là điểm yếu của các mô hình thống kê truyền thống như VSM.
+
+Tuy nhiên, cần lưu ý rằng chi phí tính toán và triển khai của mô hình học sâu cao hơn đáng kể so với VSM. Trong khi VSM chỉ yêu cầu các phép tính tuyến tính đơn giản trên ma trận TF-IDF, thì mô hình neural đòi hỏi tài nguyên lớn hơn cho việc mã hóa văn bản và xây dựng chỉ mục vector. Do đó, lựa chọn mô hình phù hợp còn tùy thuộc vào bối cảnh ứng dụng: nếu yêu cầu hiệu suất cao, đặc biệt là trong các hệ thống tìm kiếm ngữ nghĩa, mô hình học sâu là lựa chọn ưu việt; còn nếu hệ thống giới hạn về tài nguyên hoặc cần xử lý nhanh các truy vấn đơn giản, VSM vẫn là một giải pháp hiệu quả và dễ triển khai.

@@ -334,6 +334,15 @@ INPUT ./assets/bert.png
 INPUT ./src/3:neural_network_based_model/3:y_tuong/index.tex
 INPUT ./src/3:neural_network_based_model/4:lap_chi_muc/index.tex
 INPUT ./src/4:cai_dat_va_danh_gia/index.tex
+INPUT ./src/4:cai_dat_va_danh_gia/1:du_lieu_va_do_do/index.tex
+INPUT ./src/4:cai_dat_va_danh_gia/2:vector_space_model/index.tex
+INPUT ./assets/vsm-flowchart.png
+INPUT ./assets/vsm-flowchart.png
+INPUT ./src/4:cai_dat_va_danh_gia/3:neural_network_based_model/index.tex
+INPUT ./assets/nn-based-flowchart.png
+INPUT ./assets/nn-based-flowchart.png
+INPUT /home/variphx/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmonolt10-bold.luc
+INPUT ./src/4:cai_dat_va_danh_gia/4:danh_gia/index.tex
 INPUT ./src/5:tong_ket_va_mo_rong/index.tex
 INPUT ./src/6:ung_dung_thuc_te/index.tex
 INPUT ./assets/app_demo.png
@@ -351,4 +360,5 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmmi6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmmi8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmsy6.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

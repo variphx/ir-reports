@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2026/dev/Arch Linux)  (format=lualatex 2025.6.22)  23 JUN 2025 23:39
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2026/dev/Arch Linux)  (format=lualatex 2025.6.22)  24 JUN 2025 11:33
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/variphx/ir-reports/main.tex
@@ -1075,7 +1075,7 @@ Package epstopdf Info: Source file: <assets/uit_logo.eps>
 (epstopdf)             Command: <repstopdf --outfile=assets/uit_logo-eps-converted-to.pdf assets/uit_logo.eps>
 (epstopdf)             \includegraphics on input line 25.
 Package epstopdf Info: Output file is already uptodate.
-<assets/uit_logo-eps-converted-to.pdf, id=191, 654.445pt x 528.97626pt>
+<assets/uit_logo-eps-converted-to.pdf, id=208, 654.445pt x 528.97626pt>
 File: assets/uit_logo-eps-converted-to.pdf Graphic file (type pdf)
 <use assets/uit_logo-eps-converted-to.pdf>
 Package luatex.def Info: assets/uit_logo-eps-converted-to.pdf  used on input line 25.
@@ -1137,7 +1137,7 @@ Chương 2.
 [14]) (./src/2:vector_space_model/3:y_tuong/index.tex
 
 [15]
-<assets/vsm-illustration.png, id=334, 837.1275pt x 511.9125pt>
+<assets/vsm-illustration.png, id=354, 837.1275pt x 511.9125pt>
 File: assets/vsm-illustration.png Graphic file (type png)
 <use assets/vsm-illustration.png>
 Package luatex.def Info: assets/vsm-illustration.png  used on input line 23.
@@ -1199,7 +1199,7 @@ Chương 3.
 ]) (./src/3:neural_network_based_model/2:kien_truc_bert/index.tex
 
 [41]
-<assets/bert.png, id=484, 766.865pt x 504.88625pt>
+<assets/bert.png, id=504, 766.865pt x 504.88625pt>
 File: assets/bert.png Graphic file (type png)
 <use assets/bert.png>
 Package luatex.def Info: assets/bert.png  used on input line 18.
@@ -1216,55 +1216,82 @@ Package luatex.def Info: assets/bert.png  used on input line 18.
 
 [46]
 Chương 4.
-)
+(./src/4:cai_dat_va_danh_gia/1:du_lieu_va_do_do/index.tex
 
 [47
 
-] (./src/5:tong_ket_va_mo_rong/index.tex
+]
 
-[48]
+[48]) (./src/4:cai_dat_va_danh_gia/2:vector_space_model/index.tex
 
 [49]
-Chương 5.
-)
+<assets/vsm-flowchart.png, id=547, 901.404pt x 192.282pt>
+File: assets/vsm-flowchart.png Graphic file (type png)
+<use assets/vsm-flowchart.png>
+Package luatex.def Info: assets/vsm-flowchart.png  used on input line 15.
+(luatex.def)             Requested size: 426.79134pt x 91.04149pt.
 
-[50
 
-] (./src/6:ung_dung_thuc_te/index.tex
+[50<./assets/vsm-flowchart.png>]) (./src/4:cai_dat_va_danh_gia/3:neural_network_based_model/index.tex
 
 [51]
+<assets/nn-based-flowchart.png, id=558, 844.026pt x 166.221pt>
+File: assets/nn-based-flowchart.png Graphic file (type png)
+<use assets/nn-based-flowchart.png>
+Package luatex.def Info: assets/nn-based-flowchart.png  used on input line 17.
+(luatex.def)             Requested size: 426.79134pt x 84.05379pt.
+
 
 [52]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 23.
+
+
+[53<./assets/nn-based-flowchart.png>]) (./src/4:cai_dat_va_danh_gia/4:danh_gia/index.tex
+
+[54])) (./src/5:tong_ket_va_mo_rong/index.tex
+
+[55]
+Chương 5.
+
+
+[56
+
+]) (./src/6:ung_dung_thuc_te/index.tex
+
+[57]
+
+[58]
 Chương 6.
 
 
-[53
+[59
 
 ]
-<assets/app_demo.png, id=538, 644.736pt x 316.455pt>
+<assets/app_demo.png, id=596, 644.736pt x 316.455pt>
 File: assets/app_demo.png Graphic file (type png)
 <use assets/app_demo.png>
 Package luatex.def Info: assets/app_demo.png  used on input line 22.
 (luatex.def)             Requested size: 426.79134pt x 209.48384pt.
 
 
-[54<./assets/app_demo.png>]
+[60<./assets/app_demo.png>]
 
-[55]
-
-[56]
-
-[57]
-
-[58]
-
-[59]
-
-[60]
-
-[61])
+[61]
 
 [62]
+
+[63]
+
+[64]
+
+[65]
+
+[66]
+
+[67])
+
+[68]
 Module polyglossia Info: Language data for vietnamese
 (polyglossia)            lefthyphenmin	0
 (polyglossia)            loader	hyph-vi.tex
@@ -1273,7 +1300,7 @@ Module polyglossia Info: Language data for vietnamese
 Module polyglossia Info: Language vietnamese was not yet loaded; created with id 5 on input line 56
 
 
-[63
+[69
 
 ] (./main.aux)
  ***********
@@ -1281,26 +1308,26 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5600A04959F9F8D07EC474905D6162A2;8314.
+(rerunfilecheck)             Checksum: 87C3BA88719D830E0423F63E3FD1437C;8928.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 33379 strings out of 475506
+ 33453 strings out of 475506
  125165,1977958 words of node,token memory allocated
- 696 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 33 attribute, 68 glue_spec, 33 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:1,2:629,3:255,4:194,5:373,6:77,7:6120,8:65,9:527,10:21,11:660
- 55239 multiletter control sequences out of 65536+600000
- 64 fonts using 5013039 bytes
+ 734 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 5 kern, 1 penalty, 1 glyph, 41 attribute, 68 glue_spec, 41 attribute_list, 2 write, 2 pdf_action nodes
+   avail lists: 1:1,2:637,3:281,4:212,5:384,6:81,7:5319,8:65,9:527,10:21,11:218
+ 55271 multiletter control sequences out of 65536+600000
+ 65 fonts using 5139447 bytes
  84i,11n,89p,2048b,1172s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/fonts/OTF/lmromancaps10-regular.otf></usr/share/fonts/OTF/lmroman10-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/fonts/OTF/lmmono12-regular.otf></usr/share/fonts/OTF/lmroman12-italic.otf></usr/share/fonts/OTF/lmroman12-bold.otf></usr/share/fonts/OTF/lmroman17-regular.otf></usr/share/fonts/OTF/lmroman12-regular.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmex10.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (65 pages, 1305054 bytes).
+</usr/share/fonts/OTF/lmromancaps10-regular.otf></usr/share/fonts/OTF/lmroman10-regular.otf></usr/share/fonts/OTF/lmmonolt10-bold.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/fonts/OTF/lmroman8-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/fonts/OTF/lmmono12-regular.otf></usr/share/fonts/OTF/lmroman12-italic.otf></usr/share/fonts/OTF/lmroman12-bold.otf></usr/share/fonts/OTF/lmroman17-regular.otf></usr/share/fonts/OTF/lmroman12-regular.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmex10.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (71 pages, 1486880 bytes).
 
-PDF statistics: 680 PDF objects out of 1000 (max. 8388607)
- 569 compressed objects within 6 object streams
- 157 named destinations out of 1000 (max. 131072)
- 384 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 754 PDF objects out of 1000 (max. 8388607)
+ 625 compressed objects within 7 object streams
+ 169 named destinations out of 1000 (max. 131072)
+ 416 words of extra memory for PDF output out of 10000 (max. 100000000)
 

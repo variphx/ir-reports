@@ -1,0 +1,61 @@
+\section{Dữ liệu và độ đo}
+Trong quá trình thực nghiệm, nhóm sử dụng tập dữ liệu \textbf{Cranfield} từ nguồn \url{https://ir-datasets.com/cranfield.html}. Đây là một tập dữ liệu kinh điển trong lĩnh vực truy hồi thông tin, được xây dựng nhằm phục vụ việc đánh giá các mô hình truy xuất tài liệu. Cấu trúc của tập dữ liệu bao gồm:
+
+\begin{itemize}
+    \item \textbf{Số lượng văn bản (documents)}: 1400 tài liệu, mỗi tài liệu có một mã \texttt{doc\_id} duy nhất có độ dài tối đa 4 ký tự.
+    \item \textbf{Số lượng truy vấn (queries)}: 225 truy vấn được xây dựng trước.
+    \item \textbf{Tập phản hồi chuẩn (qrels)}: 1837 cặp truy vấn--tài liệu có gán mức độ liên quan (relevance judgments) từ người đánh giá.
+\end{itemize}
+
+Các mức độ liên quan trong \texttt{qrels} được phân loại theo thang điểm như sau:
+\begin{itemize}
+    \item \texttt{4}: rất liên quan (highly relevant) --- 363 trường hợp
+    \item \texttt{3}: liên quan (relevant) --- 734 trường hợp
+    \item \texttt{2}: hơi liên quan (somewhat relevant) --- 387 trường hợp
+    \item \texttt{1}: ít liên quan --- 128 trường hợp
+    \item \texttt{-1}: không liên quan --- 225 trường hợp
+\end{itemize}
+
+Các độ đo được định nghĩa như sau:
+
+\begin{itemize}
+    \item \textbf{Precision} (Độ chính xác): Tính tỷ lệ giữa số tài liệu liên quan được truy xuất so với tổng số tài liệu được truy xuất.
+          \[
+              \text{Precision} = \frac{|\text{Relevant Documents} \cap \text{Retrieved Documents}|}{|\text{Retrieved Documents}|}
+          \]
+
+    \item \textbf{Recall} (Độ bao phủ): Tính tỷ lệ giữa số tài liệu liên quan được truy xuất so với tổng số tài liệu liên quan trong tập dữ liệu.
+          \[
+              \text{Recall} = \frac{|\text{Relevant Documents} \cap \text{Retrieved Documents}|}{|\text{Relevant Documents}|}
+          \]
+
+    \item \textbf{Precision@k} và \textbf{Recall@k}: Là độ chính xác và độ bao phủ khi chỉ xét \textit{k} tài liệu đầu tiên được truy xuất (ví dụ \(k = 10\)).
+          \[
+              \text{Precision@}k = \frac{\text{Số tài liệu liên quan trong top } k}{k};
+          \]
+          \[
+              \text{Recall@}k = \frac{\text{Số tài liệu liên quan trong top } k}{\text{Tổng số tài liệu liên quan}}
+          \]
+    \item \textbf{11-point Interpolated Precision (TREC-style)}: Precision tại 11 mức recall cố định \(\{0.0, 0.1, \ldots, 1.0\}\) được nội suy:
+          \[
+              P_{\text{interp}}(r) = \max_{\tilde{r} \geq r} P(\tilde{r})
+          \]
+          Từ đó, ta lấy trung bình trên toàn bộ 11 điểm để thu được kết quả đánh giá.
+
+    \item \textbf{Average Precision (AP)}: Tính trung bình độ chính xác tại mỗi vị trí trong danh sách truy xuất mà tài liệu tại đó là liên quan.
+          \[
+              \text{AP} = \frac{1}{R} \sum_{k=1}^{n} P(k) \cdot \text{rel}(k)
+          \]
+          trong đó:
+          \begin{itemize}
+              \item \(R\) là tổng số tài liệu liên quan cho truy vấn đó.
+              \item \(P(k)\) là độ chính xác tại vị trí thứ \(k\).
+              \item \(\text{rel}(k)\) là hàm chỉ số, bằng 1 nếu tài liệu ở vị trí \(k\) là liên quan, ngược lại bằng 0.
+          \end{itemize}
+
+    \item \textbf{Mean Average Precision (MAP)}: Là trung bình của AP trên toàn bộ tập truy vấn.
+          \[
+              \text{MAP} = \frac{1}{Q} \sum_{q=1}^{Q} \text{AP}_q
+          \]
+          với \(Q\) là tổng số truy vấn.
+\end{itemize}

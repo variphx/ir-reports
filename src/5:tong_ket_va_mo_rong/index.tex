@@ -1,2 +1,25 @@
 \chapter{Tổng kết và mở rộng}
-\lipsum
+Qua quá trình xây dựng và thực nghiệm hai mô hình truy xuất thông tin – Vector Space Model (VSM) truyền thống và mô hình Neural Network – nhóm đã tiến hành đánh giá toàn diện về hiệu suất, khả năng tổng quát hóa, cũng như tiềm năng ứng dụng của từng phương pháp.
+
+Kết quả cho thấy rằng mô hình neural network-based kết hợp biểu diễn ngữ nghĩa (semantic embeddings) mang lại độ chính xác và khả năng bao phủ tài liệu tốt hơn, thể hiện qua các chỉ số như Precision@10, Recall@10 và Mean Average Precision (MAP). Điều này khẳng định ưu thế rõ rệt của các phương pháp học sâu trong việc nắm bắt ngữ nghĩa và xử lý các truy vấn mơ hồ hoặc có ngữ cảnh phức tạp – điều mà các mô hình dựa trên biểu diễn rời rạc như VSM khó có thể đạt được.
+
+Tuy nhiên, VSM vẫn có những ưu điểm nhất định về tính đơn giản, dễ triển khai, và tốc độ xử lý khi làm việc với tập dữ liệu nhỏ hoặc hệ thống có tài nguyên hạn chế. Do đó, thay vì loại bỏ hoàn toàn VSM, một hướng mở rộng tiềm năng là tăng cường khả năng biểu diễn của VSM thông qua các chiến lược tiền xử lý nâng cao. Cụ thể:
+
+\begin{itemize}
+    \item \textbf{Áp dụng lemmatization thay vì stemming}: Khác với stemming vốn chỉ rút gọn từ về gốc hình thức, lemmatization giúp đưa từ về dạng cơ sở có nghĩa, đảm bảo giữ lại ngữ nghĩa tốt hơn, từ đó giảm hiện tượng phân mảnh từ vựng và cải thiện chất lượng truy xuất.
+
+    \item \textbf{Sử dụng bigram/trigram}: Việc mở rộng biểu diễn từ đơn sang cụm từ (n-grams) có thể giúp hệ thống nắm bắt tốt hơn các đơn vị ngữ nghĩa phức tạp, ví dụ như “information retrieval” hay “machine learning”, thay vì xem chúng là hai từ rời rạc.
+    \item \textbf{Lọc đặc trưng bằng ngưỡng TF-IDF}: Một số từ có thể xuất hiện rất thường xuyên nhưng lại không mang ý nghĩa phân biệt. Do đó, việc sử dụng chỉ số TF-IDF không chỉ phục vụ cho việc biểu diễn vector mà còn có thể dùng như một tiêu chí lọc đặc trưng: loại bỏ các từ có giá trị TF-IDF quá thấp (không mang tính phân biệt), hoặc quá cao (xuất hiện trong quá ít tài liệu). Điều này giúp giảm nhiễu trong không gian đặc trưng và cải thiện hiệu suất truy xuất.
+    \item \textbf{Áp dụng weighting scheme cải tiến}: Thay vì sử dụng TF-IDF truyền thống, có thể thử các biến thể như BM25 hoặc lược đồ weighting theo Entropy nhằm đánh giá mức độ quan trọng của từ trong ngữ cảnh cụ thể hơn.
+\end{itemize}
+
+Về phía mô hình học sâu, mặc dù hiệu năng vượt trội nhưng vẫn tồn tại các thách thức về chi phí tính toán và khả năng mở rộng trong môi trường tài nguyên hạn chế. Do đó, một số hướng cải tiến trong tương lai có thể bao gồm:
+
+\begin{itemize}
+    \item \textbf{Tối ưu hóa pipeline truy xuất}: Kết hợp các chiến lược nén embedding, giảm chiều vector hoặc sử dụng các kỹ thuật indexing hiệu quả hơn như HNSW trong FAISS để tăng tốc độ và tiết kiệm bộ nhớ.
+    \item \textbf{Fine-tune mô hình trên tập liệu miền hẹp}: Việc huấn luyện lại (fine-tuning) mô hình embedding như MiniLM trên tập dữ liệu Cranfield có thể giúp mô hình học tốt hơn các đặc điểm ngữ nghĩa chuyên biệt trong miền, từ đó nâng cao chất lượng truy xuất.
+
+    \item \textbf{Kết hợp hai mô hình (Hybrid Retrieval)}: Một hướng tiếp cận đầy tiềm năng là xây dựng hệ thống truy xuất hai giai đoạn. Giai đoạn đầu sử dụng VSM để lọc nhanh tập tài liệu ban đầu (candidate documents), sau đó giai đoạn hai dùng mô hình học sâu để tái xếp hạng (re-ranking) theo mức độ liên quan ngữ nghĩa. Mô hình lai này tận dụng ưu điểm tốc độ của VSM và độ chính xác của embedding.
+\end{itemize}
+
+Tổng thể, sự chuyển dịch từ các mô hình thống kê truyền thống sang các mô hình ngữ nghĩa học sâu là xu hướng tất yếu trong lĩnh vực truy hồi thông tin hiện đại. Tuy nhiên, việc tận dụng tối ưu từng mô hình cần được cân nhắc kỹ lưỡng dựa trên đặc điểm bài toán, tập dữ liệu và hạn chế tài nguyên thực tế. Trong tương lai, các hướng nghiên cứu kết hợp giữa biểu diễn ngữ nghĩa và khai thác cấu trúc truy vấn, hoặc áp dụng mô hình đa phương thức (kết hợp văn bản và hình ảnh) hứa hẹn sẽ tiếp tục mở rộng tiềm năng của các hệ thống tìm kiếm thông minh.
