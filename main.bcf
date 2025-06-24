@@ -2374,9 +2374,12 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">geeksforgeeks</bcf:citekey>
     <bcf:citekey order="2" intorder="1">geeksforgeeks</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">Abdulahhad_2018</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">manning2008introduction</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">manning2008introduction</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">singh2022vectorspacemodel</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">buckley_salton_allan1993smart</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Abdulahhad_2018</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">manning2008introduction</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">devlin2019bertpretrainingdeepbidirectional</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">vaswani2023attentionneed</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

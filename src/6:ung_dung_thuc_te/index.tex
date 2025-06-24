@@ -19,7 +19,7 @@ Sau khi người dùng gửi truy vấn, hệ thống thực hiện các bước
 \begin{figure}[H]
     \caption{Giao diện hội thoại chatbot truy xuất thông tin tuyển sinh}
     \begin{center}
-    \includegraphics[width=\linewidth]{assets/app_demo.png}
+        \includegraphics[width=\linewidth]{assets/app_demo.png}
     \end{center}
 \end{figure}
 
@@ -125,9 +125,9 @@ Quá trình xử lý văn bản cho BM25 bao gồm:
 \subsection{Cơ chế kết hợp điểm số}
 
 Hai điểm số truy xuất từ mô hình ngữ nghĩa và mô hình BM25 được kết hợp theo công thức sau:
-\[
+\begin{equation}
     \text{final\_score} = \alpha \cdot \text{semantic\_score} + (1 - \alpha) \cdot \text{bm25\_score\_normalized}
-\]
+\end{equation}
 
 Người dùng hoặc hệ thống có thể điều chỉnh tham số \(\alpha\) nhằm ưu tiên một phương pháp hơn trong các ngữ cảnh truy vấn khác nhau. Ví dụ, nếu \(\alpha = 1\) thì hệ thống sẽ thực hiện truy xuất hoàn toàn theo hướng ngữ nghĩa; ngược lại, nếu \(\alpha = 0\), chỉ có điểm BM25 được sử dụng.
 

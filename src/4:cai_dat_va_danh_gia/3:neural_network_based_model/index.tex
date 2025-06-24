@@ -12,10 +12,9 @@ Khi vector embedding của truy vấn đã được tạo, hệ thống sử d�
 Cuối cùng, hệ thống xếp hạng các tài liệu theo mức độ tương đồng với truy vấn và trả về danh sách các tài liệu liên quan nhất. Đây chính là đầu ra của hệ thống -- danh sách kết quả truy xuất được sắp xếp theo độ liên quan cao đến thấp, mang lại trải nghiệm tìm kiếm hiệu quả và thông minh hơn so với các phương pháp dựa trên thống kê truyền thống.
 
 \begin{figure}[H]
+    \centering
     \caption{Sơ đồ hệ thống của Neural Network-based Model}
-    \begin{center}
-        \includegraphics[width=\linewidth]{assets/nn-based-flowchart.png}
-    \end{center}
+    \includegraphics[width=\linewidth]{assets/nn-based-flowchart.png}
 \end{figure}
 
 Nhóm cũng thực hiện thực nghiệm trên tập dữ liệu Cranfield bằng cách sử dụng mô hình Neural Network để cải thiện chất lượng truy xuất. Cụ thể, nhóm sử dụng mô hình \texttt{sentence-transformers/all-MiniLM-L6-v2} để biểu diễn các câu truy vấn và văn bản tài liệu dưới dạng vector embedding. Đây là một mô hình được huấn luyện dựa trên kiến trúc \textbf{MiniLM}, tối ưu hóa cho bài toán \textit{semantic textual similarity}, đặc biệt hiệu quả trong các tác vụ truy hồi văn bản nhờ vào khả năng học được biểu diễn ngữ nghĩa giàu thông tin ở dạng vector chiều thấp.

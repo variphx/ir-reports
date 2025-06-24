@@ -59,6 +59,92 @@
       \verb http://dx.doi.org/10.1007/978-3-319-76941-7_45
       \endverb
     \endentry
+    \entry{buckley_salton_allan1993smart}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7c2e09851b0d2700d0ec70f03daddc88}{%
+           family={Buckley},
+           familyi={B\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5299281e19f9b62eb7b3db2c8c4089fd}{%
+           family={Salton},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2c6b824b86026680c8aa76f03c0b4056}{%
+           family={Allan},
+           familyi={A\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9b56e5bc120fede1e29a0acc89951fa}
+      \strng{fullhash}{c9b56e5bc120fede1e29a0acc89951fa}
+      \strng{fullhashraw}{c9b56e5bc120fede1e29a0acc89951fa}
+      \strng{bibnamehash}{c9b56e5bc120fede1e29a0acc89951fa}
+      \strng{authorbibnamehash}{c9b56e5bc120fede1e29a0acc89951fa}
+      \strng{authornamehash}{c9b56e5bc120fede1e29a0acc89951fa}
+      \strng{authorfullhash}{c9b56e5bc120fede1e29a0acc89951fa}
+      \strng{authorfullhashraw}{c9b56e5bc120fede1e29a0acc89951fa}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{The SMART information retrieval project}
+      \field{year}{1993}
+      \verb{doi}
+      \verb 10.3115/1075671.1075771
+      \endverb
+    \endentry
+    \entry{devlin2019bertpretrainingdeepbidirectional}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=13202969e372bc82318f9629cbdd199b}{%
+           family={Devlin},
+           familyi={D\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a45784fe7163b45f11d166564f5d24b6}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Ming-Wei},
+           giveni={M\bibinithyphendelim W\bibinitperiod}}}%
+        {{hash=8dde73b4194f5bc4230c4808f3fc1534}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Kenton},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b92aa283415413bb8d2a1548716d0c7d}{%
+           family={Toutanova},
+           familyi={T\bibinitperiod},
+           given={Kristina},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{fullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{fullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{bibnamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorbibnamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authornamehash}{ad8e2e2a80d28ade21e86852b804fc9b}
+      \strng{authorfullhash}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \strng{authorfullhashraw}{e8bccd48302a14eeba57d9dce2f49ef4}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1810.04805
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1810.04805
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1810.04805
+      \endverb
+    \endentry
     \entry{geeksforgeeks}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=f1e069787ece74531d112559945c6871}{%
@@ -122,6 +208,104 @@
       \endverb
       \verb{url}
       \verb https://books.google.com.vn/books?id=GNvtngEACAAJ
+      \endverb
+    \endentry
+    \entry{singh2022vectorspacemodel}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=b86b524cae95c2f93aa6320838ea395b}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Vaibhav},
+           giveni={V\bibinitperiod}}}%
+        {{hash=82f9d64d8ac09a1f411aa2d6ab6d4973}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Vinay},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad669c2024642b84d2a7d656067425f4}
+      \strng{fullhash}{ad669c2024642b84d2a7d656067425f4}
+      \strng{fullhashraw}{ad669c2024642b84d2a7d656067425f4}
+      \strng{bibnamehash}{ad669c2024642b84d2a7d656067425f4}
+      \strng{authorbibnamehash}{ad669c2024642b84d2a7d656067425f4}
+      \strng{authornamehash}{ad669c2024642b84d2a7d656067425f4}
+      \strng{authorfullhash}{ad669c2024642b84d2a7d656067425f4}
+      \strng{authorfullhashraw}{ad669c2024642b84d2a7d656067425f4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{VECTOR SPACE MODEL: AN INFORMATION RETRIEVAL SYSTEM}
+      \field{year}{2022}
+    \endentry
+    \entry{vaswani2023attentionneed}{misc}{}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=f2bc899b1160163417da7bf510f15d33}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={Lukasz},
+           giveni={L\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{fullhashraw}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{bibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorbibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{authorfullhashraw}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CL}
+      \field{eprinttype}{arXiv}
+      \field{title}{Attention Is All You Need}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 1706.03762
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1706.03762
       \endverb
     \endentry
   \enddatalist

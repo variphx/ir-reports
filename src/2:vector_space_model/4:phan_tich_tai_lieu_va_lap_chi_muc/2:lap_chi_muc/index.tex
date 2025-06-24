@@ -5,18 +5,17 @@
 Có thể hình dung đơn giản rằng, lập chỉ mục chính là hành động tạo nên một \textbf{cấu trúc dữ liệu trung gian}, nơi chứa đựng những thông tin thiết yếu được trích xuất từ tài liệu gốc, nhằm phục vụ trực tiếp cho quá trình truy vấn về sau. Nhờ vào cấu trúc này, thay vì phải quét lại toàn bộ tập hợp văn bản mỗi lần có yêu cầu tìm kiếm, hệ thống chỉ cần thao tác trên chỉ mục -- một tập hợp đã được nén gọn, tổ chức hợp lý và tối ưu cho việc tra cứu.
 
 \begin{table}[H]
+    \centering
     \caption{Ví dụ về chỉ mục}
-    \begin{center}
-        \begin{tabularx}{0.8\linewidth}{X || X X X X}
-            \toprule
-                    & \(t_1\) & \(t_2\) & \dots & \(t_m\) \\
-            \midrule\midrule
-            \(d_1\) & 1       & 0       & \dots & 1       \\
-            \dots   & \dots   & ...     & \dots & 1       \\
-            \(d_n\) & 1       & 1       & \dots & 1       \\
-            \bottomrule
-        \end{tabularx}
-    \end{center}
+    \begin{tabularx}{0.8\linewidth}{X || X X X X}
+        \toprule
+                & \(t_1\) & \(t_2\) & \dots & \(t_m\) \\
+        \midrule\midrule
+        \(d_1\) & 1       & 0       & \dots & 1       \\
+        \dots   & \dots   & ...     & \dots & 1       \\
+        \(d_n\) & 1       & 1       & \dots & 1       \\
+        \bottomrule
+    \end{tabularx}
 \end{table}
 
 Quá trình lập chỉ mục thường diễn ra với tốc độ nhanh chóng, bởi các thuật ngữ được ghi nhận theo cách \textbf{gia tăng tuyến tính}, tức là mỗi khi một từ khóa mới được phát hiện, nó sẽ ngay lập tức được thêm vào chỉ mục với các thông tin đi kèm được cập nhật đồng thời. Tuy nhiên, chính sự phong phú và không đồng đều của ngôn ngữ tự nhiên lại tạo nên một thách thức đáng kể -- đó là \textbf{kích thước chỉ mục có thể phình to nhanh chóng}, đặc biệt khi làm việc với kho dữ liệu lớn. Kết quả là, trong khi việc xây dựng chỉ mục có thể được hoàn tất nhanh chóng, thì quá trình tìm kiếm thông tin -- nếu không có thêm biện pháp tối ưu -- có thể gặp trở ngại do chi phí xử lý gia tăng theo độ lớn của cấu trúc chỉ mục.

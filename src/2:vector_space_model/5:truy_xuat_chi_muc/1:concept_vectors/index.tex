@@ -1,22 +1,21 @@
 \subsection{Concept Vectors}
-\textbf{Concept Vectors} là một phương pháp biểu diễn trừu tượng, mang tính hình thức hóa cao, được sử dụng để mã hóa cả \textbf{tài liệu (document)} lẫn \textbf{truy vấn (query)} dưới dạng các vector trong một không gian ngữ nghĩa đa chiều. Trong không gian này, mỗi chiều không còn đơn thuần đại diện cho một từ khóa (term) cụ thể như trong mô hình không gian vector cổ điển, mà thay vào đó là một \textbf{khái niệm (concept)} -- một đơn vị thông tin mang tính tổng quát và trừu tượng hơn, phản ánh sâu sắc bản chất ngữ nghĩa của nội dung. \cite{Abdulahhad_2018}
+\textbf{Concept Vectors} \cite{Abdulahhad_2018} là một phương pháp biểu diễn trừu tượng, mang tính hình thức hóa cao, được sử dụng để mã hóa cả \textbf{tài liệu (document)} lẫn \textbf{truy vấn (query)} dưới dạng các vector trong một không gian ngữ nghĩa đa chiều. Trong không gian này, mỗi chiều không còn đơn thuần đại diện cho một từ khóa (term) cụ thể như trong mô hình không gian vector cổ điển, mà thay vào đó là một \textbf{khái niệm (concept)} -- một đơn vị thông tin mang tính tổng quát và trừu tượng hơn, phản ánh sâu sắc bản chất ngữ nghĩa của nội dung.
 
 Việc \textbf{truy xuất chỉ mục} trong mô hình này không còn dựa trực tiếp vào từ khóa bề mặt, mà được thực hiện thông qua sự so sánh giữa các \textbf{vector khái niệm} (concept vectors) -- vốn là những đại diện ngữ nghĩa sâu của cả tài liệu và câu truy vấn. Mỗi concept vector được cấu trúc như một vector trong không gian nhiều chiều, trong đó \textbf{mỗi chiều tượng trưng cho một khái niệm}, và các \textbf{trọng số (weights)} tương ứng với từng chiều biểu thị mức độ hiện diện hoặc tầm quan trọng của khái niệm đó trong nội dung được xét.
 
-Minh họa rõ ràng cho cách biểu diễn này có thể thấy trong \ref{table:vector_space_model:truy_xuat_chi_muc:concept_vectors_sach_giao_khoa}, nơi các tài liệu -- cụ thể là danh sách các cuốn sách giáo khoa môn Toán do Bộ Giáo dục và Đào tạo Việt Nam ban hành -- được mã hóa thành các concept vector. Hàng đầu tiên trong bảng biểu diễn là tập hợp các sách, trong khi cột đầu tiên liệt kê các từ hoặc khái niệm then chốt. Các ô giao giữa hàng và cột được sử dụng để biểu thị sự hiện diện hay vắng mặt của từng khái niệm trong mỗi cuốn sách -- từ đó tạo nên các vector ngữ nghĩa đặc trưng cho từng tài liệu.
-
 \begin{table}[H]
-    \caption{Ví dụ về Concept Vectors với sách giáo khoa}
-    \label{table:vector_space_model:truy_xuat_chi_muc:concept_vectors_sach_giao_khoa}
-    \begin{tabularx}{\linewidth}{X || l l l l l l}
+    \centering
+    \caption{Ví dụ về Concept Vectors với tập Cranfield}
+    \begin{tabularx}{\linewidth}{l || X X X X}
         \toprule
-                            & Toán 12 & Toán 11 & Toán 10 & Toán 9 & Toán 8 & Toán 7 \\
+                   & Doc 0 & Doc 19 & Doc 452 & \dots \\
         \midrule\midrule
-        Hình học không gian & 1       & 1       & 1       & 0      & 0      & 0      \\
-        Đệ quy              & 1       & 1       & 0       & 0      & 0      & 0      \\
-        Đạo hàm             & 1       & 0       & 0       & 0      & 0      & 0      \\
-        Ma trận             & 1       & 0       & 1       & 1      & 0      & 0      \\
-        Lượng giác          & 0       & 1       & 1       & 0      & 1      & 1      \\
+        slipstream & 1     & 0      & 1       & \dots \\
+        support    & 1     & 1      & 0       & \dots \\
+        effect     & 1     & 0      & 0       & \dots \\
+        specif     & 1     & 1      & 0       & \dots \\
+        subtract   & 1     & 0      & 0       & \dots \\
+        \dots      & \dots & \dots  & \dots   & \dots \\
         \bottomrule
     \end{tabularx}
 \end{table}
