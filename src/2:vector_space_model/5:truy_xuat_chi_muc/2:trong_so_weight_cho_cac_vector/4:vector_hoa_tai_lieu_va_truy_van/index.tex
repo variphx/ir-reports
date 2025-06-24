@@ -26,17 +26,18 @@ Dưới đây là một ví dụ điển hình về việc gán trọng số TF-
 Giả sử chúng ta có ba tài liệu trong corpus:
 
 \begin{table}[H]
-    \centering
     \caption{Ví dụ tài liệu cần gán trọng số}
-    \begin{tabularx}{0.7\linewidth}{l || X}
-        \toprule
-        \textbf{Tài liệu} & \textbf{Nội dung}           \\
-        \midrule\midrule
-        \(d_1\)           & The cat sat on the mat      \\
-        \(d_2\)           & My dog and cat are the best \\
-        \(d_3\)           & The locals are playing      \\
-        \bottomrule
-    \end{tabularx}
+    \begin{center}
+        \begin{tabularx}{0.7\linewidth}{l || X}
+            \toprule
+            \textbf{Tài liệu} & \textbf{Nội dung}           \\
+            \midrule\midrule
+            \(d_1\)           & The cat sat on the mat      \\
+            \(d_2\)           & My dog and cat are the best \\
+            \(d_3\)           & The locals are playing      \\
+            \bottomrule
+        \end{tabularx}
+    \end{center}
 \end{table}
 
 Và một truy vấn đơn giản:
@@ -58,16 +59,17 @@ Trong khi đó, từ ``the'' có IDF = \(\log(\frac{3}{3})\) = 0, dẫn đến T
 Sau khi tính toán, chúng ta được hai vector TF-IDF:
 
 \begin{table}[H]
-    \centering
     \caption{Giá trị TF-IDF lập theo term cho từng tài liệu}
-    \begin{tabularx}{\linewidth}{l || X X X l}
-        \toprule
-        \textbf{Term} & \textbf{\(d_1\) TF-IDF} & \textbf{\(d_2\) TF-IDF} & \textbf{\(d_3\) TF-IDF} & \textbf{Query TF-IDF} \\
-        \midrule\midrule
-        \textbf{the}  & 0                       & 0                       & 0                       & 0                     \\
-        \textbf{cat}  & 0.0306                  & 0.0252                  & 0                       & 0.18                  \\
-        \bottomrule
-    \end{tabularx}
+    \begin{center}
+        \begin{tabularx}{\linewidth}{l || X X X l}
+            \toprule
+            \textbf{Term} & \textbf{\(d_1\) TF-IDF} & \textbf{\(d_2\) TF-IDF} & \textbf{\(d_3\) TF-IDF} & \textbf{Query TF-IDF} \\
+            \midrule\midrule
+            \textbf{the}  & 0                       & 0                       & 0                       & 0                     \\
+            \textbf{cat}  & 0.0306                  & 0.0252                  & 0                       & 0.18                  \\
+            \bottomrule
+        \end{tabularx}
+    \end{center}
 \end{table}
 
 Tiếp theo, biểu diễn truy vấn ``The cat'' cũng dưới dạng TF-IDF vector — ở đây, ``cat'' nhận trọng số \~0.18, còn ``the'' vẫn là 0.

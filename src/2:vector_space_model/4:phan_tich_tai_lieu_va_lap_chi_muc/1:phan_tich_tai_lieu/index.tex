@@ -20,7 +20,8 @@ Khi thực hiện tách từ, ta thu được 27 token, bao gồm hai lần xu�
 Một bước quan trọng trong tiến trình tiền xử lý văn bản là chuyển đổi tất cả ký tự về chữ thường (lowercasing), nhằm loại bỏ sự phân biệt giữa chữ hoa và chữ thường - vốn là đặc trưng không cần thiết trong hầu hết các hệ thống truy xuất thông tin. Việc này giúp đảm bảo rằng những từ có hình thức khác nhau nhưng mang cùng một ý nghĩa sẽ được xử lý thống nhất. Chẳng hạn, hai biểu thức 'Vietnam' và ''vietnam nếu không được chuẩn hóa sẽ bị xem là hai term hoàn toàn khác biệt, dù về mặt ngữ nghĩa, chúng là một.
 
 Trong một ví dụ minh họa đơn giản, ta có một tài liệu từ tập Cranfield sau khi thực hiện bước tách từ (tokenization):
-\textit{The, boundary, layer, in, simple, shear, flow, past, a, flat, plate, ., the, boundary, layer, equations, are, presented, for, steady, incompressible, flow, with, no, pressure, gradient, .}\\
+\textit{The, boundary, layer, in, simple, shear, flow, past, a, flat, plate, ., the, boundary, layer, equations, are, presented, for, steady, incompressible, flow, with, no, pressure, gradient, .}
+
 Sau khi áp dụng phép chuyển đổi về chữ thường, văn bản được chuẩn hóa thành:
 \textit{the, boundary, layer, in, simple, shear, flow, past, a, flat, plate, ., the, boundary, layer, equations, are, presented, for, steady, incompressible, flow, with, no, pressure, gradient, .}
 

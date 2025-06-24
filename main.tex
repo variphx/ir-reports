@@ -1,22 +1,21 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper,top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry}
 
-\usepackage{mlmodern}
-
+\usepackage{float}
+\usepackage{lipsum}
+\usepackage{parskip}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{setspace}
-\usepackage{hyphenat}
-
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{hyphenat}
+\usepackage{mlmodern}
 \usepackage{multirow}
+\usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{tabulary}
-\usepackage{tabularray}
-\usepackage{float}
+\usepackage{microtype}
 
-\usepackage{lipsum}
 \usepackage{polyglossia}
 \setmainlanguage{vietnamese}
 \setotherlanguages{english,latin}
@@ -25,8 +24,9 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
+    citecolor=green,
 }
 
 \usepackage[backend=biber,style=numeric]{biblatex}
@@ -38,11 +38,7 @@
 \input{src/abstract.tex}
 \input{src/phan_cong.tex}
 
-\setstretch{1.5}
 \tableofcontents
-
-\setstretch{1.5}
-\setlength{\parskip}{1em}
 
 \input{src/1:gioi_thieu_tong_quan/index.tex}
 \input{src/2:vector_space_model/index.tex}
