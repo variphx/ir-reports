@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2026/dev/Arch Linux)  (format=lualatex 2025.6.22)  24 JUN 2025 15:51
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2026/dev/Arch Linux)  (format=lualatex 2025.6.22)  24 JUN 2025 21:54
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1340,7 +1340,7 @@ Here is how much of LuaTeX's memory you used:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 5 glue, 6 kern, 2 penalty, 1 margin_ke
 rn, 4 glyph, 43 attribute, 68 glue_spec, 43 attribute_list, 1 write, 3 pdf_actio
 n nodes
-   avail lists: 2:703,3:327,4:247,5:403,6:94,7:5696,8:65,9:543,10:23,11:27,12:2
+   avail lists: 2:703,3:327,4:247,5:403,6:94,7:5647,8:65,9:543,10:23,11:27,12:2
  47032 multiletter control sequences out of 65536+600000
  65 fonts using 5139447 bytes
  79i,11n,89p,2098b,1166s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1359,7 +1359,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type
 fonts/type1/public/mlmodern/mlmsy10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/mlmodern/mlmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/mlmodern/mlmsy8.
 pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (69 pages, 1493685 bytes).
+Output written on main.pdf (69 pages, 1493650 bytes).
 
 PDF statistics: 783 PDF objects out of 1000 (max. 8388607)
  656 compressed objects within 7 object streams

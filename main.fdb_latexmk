@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1750755073.22898 "main.bcf" "main.bbl" "main" 1750755083.3648 0
-  "main.bcf" 1750755083.00256 109111 90931470ca0f239230f7b4b58e97c645 "lualatex"
+["biber main"] 1750755073.22898 "main.bcf" "main.bbl" "main" 1750776896.21802 0
+  "main.bcf" 1750776895.8772 109111 90931470ca0f239230f7b4b58e97c645 "lualatex"
   "refs.bib" 1750750967.11353 2146 45e23725783bf50d299a2130d61d9248 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["lualatex"] 1750755078.75879 "main.tex" "main.pdf" "main" 1750755083.36523 0
+["lualatex"] 1750776891.56314 "main.tex" "main.pdf" "main" 1750776896.21834 0
   "/etc/texmf/tex/generic/config/language.dat.lua" 1750600012.16313 17315 8fe6c22cb12a49d22617ce7517529f88 ""
   "/home/variphx/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc" 1750570159.8031 81733 f6b4cbdb13c6a9cdfc42fc0b9f9a672c ""
   "/home/variphx/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmonolt10-bold.luc" 1750584994.66839 82037 994b2dc8e4c43c33a92a76eacf478a34 ""
@@ -231,12 +231,12 @@
   "assets/uit_logo.eps" 1749525207.03231 972702 73741e6d68e71e121211e18367e3a52d ""
   "assets/vsm-flowchart.png" 1750739032.33636 107250 46f4bcc15cb11faad332d6fd187e0caf ""
   "assets/vsm-illustration.png" 1750562036.49407 21043 9ec3ddaba81025ea2a2ea504356c3f2f ""
-  "main.aux" 1750755082.99256 13541 b1624134c295d77ac52ad4fd9a98195d "lualatex"
+  "main.aux" 1750776895.8672 13541 b1624134c295d77ac52ad4fd9a98195d "lualatex"
   "main.bbl" 1750755074.12256 12073 2b2cd1f7b96e999231ef3abc691a88f4 "biber main"
-  "main.out" 1750755082.99256 9679 31358cd175b70fcdb09719b082ad6924 "lualatex"
-  "main.run.xml" 1750755083.00256 2366 d7392362b452b22581993af16850111e "lualatex"
+  "main.out" 1750776895.8772 9679 31358cd175b70fcdb09719b082ad6924 "lualatex"
+  "main.run.xml" 1750776895.8772 2366 d7392362b452b22581993af16850111e "lualatex"
   "main.tex" 1750755061.54256 1145 3856c945a5ec53b6f80a25f10c1cc5eb ""
-  "main.toc" 1750755083.00256 6529 be8a7a6b73c9f1a1a196b47668a7640e "lualatex"
+  "main.toc" 1750776895.8772 6529 be8a7a6b73c9f1a1a196b47668a7640e "lualatex"
   "src/1:gioi_thieu_tong_quan/1:bai_toan_thuc_te/index.tex" 1750588894.04791 2076 580ac7d63921cc783f66e5809806e84d ""
   "src/1:gioi_thieu_tong_quan/2:khai_niem_truy_xuat_thong_tin/index.tex" 1750598021.50682 1173 32aadc3d689df08032d28cdd8b033216 ""
   "src/1:gioi_thieu_tong_quan/3:vai_tro_cua_truy_xuat_thong_tin/index.tex" 1750589063.50789 1392 5160615e43081ad0697a013616b2af52 ""
@@ -266,10 +266,10 @@
   "src/2:vector_space_model/7:nhan_xet/index.tex" 1750674914.14724 3703 7bd535bd6cb2efd11a627ed12b52248d ""
   "src/2:vector_space_model/index.tex" 1750674110.42742 463 d58d65f54fe53c2d7032b8e2eab96211 ""
   "src/3:neural_network_based_model/1:gioi_thieu/index.tex" 1750694530.57258 2898 ff7de948147ae1a243354e163419d7be ""
-  "src/3:neural_network_based_model/2:kien_truc_bert/index.tex" 1750751661.18335 4927 e2e2d9474c22029e1271b151931042bd ""
-  "src/3:neural_network_based_model/3:y_tuong/index.tex" 1750751703.61336 4710 bcc9e788d796bdbf85eeec29bcd614e8 ""
-  "src/3:neural_network_based_model/4:lap_chi_muc/index.tex" 1750693275.51287 3569 f0c06ee3c084ea7c0f499bed1ad4c644 ""
-  "src/3:neural_network_based_model/5:truy_xuat_chi_muc/index.tex" 1750740220.15608 3264 07bf273f0f66b6f46adf5876f171014c ""
+  "src/3:neural_network_based_model/2:kien_truc_bert/index.tex" 1750776677.41724 4924 cab7e57270d621c491e1b359fe0b1814 ""
+  "src/3:neural_network_based_model/3:y_tuong/index.tex" 1750776710.55724 4706 56c9d8a96f3c95ca070374006977d420 ""
+  "src/3:neural_network_based_model/4:lap_chi_muc/index.tex" 1750776783.75722 3519 455e3410595c08f3fa4047217512fe0b ""
+  "src/3:neural_network_based_model/5:truy_xuat_chi_muc/index.tex" 1750776836.43721 3256 0bf90444dc38dfb1f1c182dea00c97c0 ""
   "src/3:neural_network_based_model/6:tinh_do_tuong_dong_va_xep_hang/index.tex" 1750748829.78404 1553 6a4f4e9265041e77708e0294db6d0abb ""
   "src/3:neural_network_based_model/7:nhan_xet/1:uu_diem/index.tex" 1750749444.06389 1727 468f761e4ba7b993f7eedd6ba77120b7 ""
   "src/3:neural_network_based_model/7:nhan_xet/2:nhuoc_diem/index.tex" 1750749568.05386 1911 46a5a4ea2e9155651d548ac3bee4aaea ""
@@ -282,7 +282,7 @@
   "src/4:cai_dat_va_danh_gia/index.tex" 1750739504.52625 294 e6afd59dd97fc0888aa19ca5400f889f ""
   "src/5:tong_ket_va_mo_rong/index.tex" 1750751835.78333 5205 27a66e9642ecb48bfc0efde07318d164 ""
   "src/6:ung_dung_thuc_te/index.tex" 1750751872.82332 17412 64569da7e52154339467042aed32b8ae ""
-  "src/abstract.tex" 1750752400.46319 1913 5557ee9ff7b2a6f2d1984ffd429fdd66 ""
+  "src/abstract.tex" 1750776885.6772 1898 31e9d61a77ef659853088af93f154d76 ""
   "src/phan_cong.tex" 1750750509.30364 2175 7821a4a826f1da211b3e879364d370db ""
   "src/titlepage.tex" 1750754813.81262 1064 403ac90169ec648509bad5bf903b82b8 ""
   (generated)
